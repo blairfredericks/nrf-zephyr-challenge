@@ -1,5 +1,5 @@
 
-# nRF Connect + Zephyr Firmware Take-Home — Crop Guardian / FW Challenge
+# nRF Connect + Zephyr Firmware Take-Home — FW Challenge
 **Repository scaffold and reference implementation**
 
 **What this bundle contains**
