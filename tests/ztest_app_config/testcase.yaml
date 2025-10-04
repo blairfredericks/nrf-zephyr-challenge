@@ -1,0 +1,7 @@
+
+tests:
+  - name: app_config
+    description: Validate Kconfig/DT precedence
+    build: true
+    requires:
+      - build

@@ -1,0 +1,7 @@
+
+tests:
+  - name: ble_codec
+    description: Validate LE encoding/decoding
+    build: true
+    requires:
+      - build

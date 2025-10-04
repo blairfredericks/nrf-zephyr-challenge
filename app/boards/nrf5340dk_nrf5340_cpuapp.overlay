@@ -1,0 +1,29 @@
+
+/ {
+    aliases {
+        led-status = &led0;
+        btn-user = &button0;
+        adc0 = &adc;
+    };
+
+    app {
+        compatible = "app,config";
+        sample-interval-ms = <1000>;
+        voltage-threshold-mv = <3300>;
+        enable-ble;
+    };
+};
+
+&led0 {
+    gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+};
+
+&button0 {
+    gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
+    debounce-interval = <10>;
+    interrupts = <11 IRQ_TYPE_EDGE_TO_ACTIVE>;
+};
+
+&adc {
+    status = "okay";
+};

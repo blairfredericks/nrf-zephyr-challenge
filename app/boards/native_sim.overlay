@@ -1,0 +1,36 @@
+
+/ {
+    aliases {
+        led-status = &led0;
+        btn-user = &button0;
+        adc0 = &adc_emul_0;
+    };
+
+    app {
+        compatible = "app,config";
+        sample-interval-ms = <1000>;
+        voltage-threshold-mv = <3300>;
+        enable-ble;
+    };
+};
+
+/ {
+    led0: led_0 {
+        compatible = "gpio-leds";
+        gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+        label = "led0";
+    };
+
+    button0: button_0 {
+        compatible = "gpio-keys";
+        gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
+        label = "button0";
+        debounce-interval = <10>;
+    };
+
+    adc_emul_0: adc_emul_0 {
+        compatible = "adc-emul";
+        label = "ADC_EMUL_0";
+        emul-type = "fixed";
+        mv = <3700>;
+    };

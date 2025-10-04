@@ -1,0 +1,24 @@
+
+menu "FW Challenge Options"
+
+config APP_SAMPLE_INTERVAL_MS
+    int "Sample interval (ms)"
+    default 0
+    help
+      If non-zero, this Kconfig value takes precedence over the devicetree
+      sample_interval_ms property. Use 0 to indicate "use devicetree/default".
+
+config APP_ENABLE_BLE
+    bool "Enable BLE support (build-time)"
+    default y
+    help
+      If enabled, Bluetooth stack is built into the firmware. You can also
+      disable Bluetooth with the overlay file 'overlay-no-ble.conf'.
+
+config APP_LED_ACTIVE_LOW
+    bool "Status LED active low"
+    default n
+    help
+      Whether the status LED is active low. Defaults to n.
+
+endmenu
